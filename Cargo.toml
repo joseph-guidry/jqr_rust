@@ -1,0 +1,12 @@
+[package]
+name = "ds_project"
+version = "0.1.0"
+authors = ["jguidy"]
+build="build.rs"
+
+[dependencies]
+
+[build-dependencies]
+cmake = "0.1.31"
+
+[build]

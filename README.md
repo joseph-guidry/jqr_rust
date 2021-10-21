@@ -1,1 +1,4 @@
-# jqr_rust
+# jqr_recert
+
+
+# cargo build --release -vv
