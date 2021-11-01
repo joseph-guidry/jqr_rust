@@ -11,3 +11,4 @@ Cargo.lock
 
 
 random_file/
+deps/*

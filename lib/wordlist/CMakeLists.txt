@@ -12,7 +12,7 @@ set(LIB_HDRS
 
 add_library(wordlist STATIC ${LIB_SRC})
 target_include_directories(wordlist PUBLIC "../include")
-target_link_libraries(wordlist PRIVATE libtree)
+target_link_libraries(wordlist PRIVATE tree)
 
 # source_group(
 #     TREE "${dsproject_SOURCE_DIR}/include"

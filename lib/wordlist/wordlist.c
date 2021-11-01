@@ -8,17 +8,17 @@ void testcall_float(float f) {
 	printf("Hello, this is a C float [%f]\n", f);
 }
 
+void test_use_tp_from_cmake_define()
+{
+    printf("this is called as constructor, but included only if using threadpool is defined\n");
+}
 
-// #ifdef USE_THREADPOOL
-//     void test_use_tp_from_cmake_define () __attribute__((constructor));
-// #endif
+#ifdef WITH_THREADPOOL
+    void test_use_tp_from_cmake_define () __attribute__((constructor));
+#endif
 
-// void test_use_tp_from_cmake_define()
-// {
-//     printf("this is called as constructor, but included only if using threadpool is defined\n");
-// }
 
-// #define trie_cleanup __attribute__((cleanup(word_list_trie_destroy)))
+
 static trie_node_t * trie;
 
 int word_list_trie_create () __attribute__((constructor));
