@@ -22,12 +22,6 @@ enum Message {
 
 impl ThreadPool {
     /// Create a new ThreadPool.
-    ///
-    /// The size is the number of threads in the pool.
-    ///
-    /// # Panics
-    ///
-    /// The `new` function will panic if the size is zero.
     pub fn new(size: usize) -> ThreadPool {
         assert!(size > 0);
 
@@ -87,15 +81,14 @@ impl Worker {
             match message {
                 Message::NewJob(job) => {
                     println!("Worker {} got a job; executing.", id);
-                    // unsafe {
-                    //     testcall_float(3.14159);
-                    // }
+                    unsafe {
+                        testcall_float(3.14159);
+                    }
 
                     job();
                 }
                 Message::Terminate => {
                     println!("Worker {} was told to terminate.", id);
-
                     break;
                 }
             }

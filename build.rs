@@ -10,4 +10,6 @@ fn main()
 	println!("cargo:rustc-link-search=native={}", dst.display());
 	println!("cargo:rustc-link-lib=static=tree");				// tells which libraries that need to be linked
 	println!("cargo:rustc-link-lib=static=wordlist");
+	println!("cargo:rustc-link-lib=static=tree");
+
 }
